@@ -6,6 +6,9 @@ import Navbar from './components/Navbar';
 import Welcome from './components/Welcome';
 import Footer from './components/Footer';
 import CreateArticle from './components/CreateArticle';
+import Login from './components/Login';
+import SingleArticle from './components/SingleArticle';
+import SignUp from './components/SignUp';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -14,6 +17,12 @@ ReactDOM.render(
       <Route exact path="/" component={Welcome} />
 
       <Route path="/articles/create" component={CreateArticle} />
+
+      <Route path="/login" component={Login} />
+
+      <Route path="/register" component={SignUp} />
+
+      <Route path="/article/:slug" component={SingleArticle} />
 
       <Footer />
     </div>
